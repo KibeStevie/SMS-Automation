@@ -44,7 +44,6 @@ def send_sms(number):
         time.sleep(1)
         
         # Select all and type the phone number
-        find_and_click_element("phone_number_input")
         time.sleep(1)
         pyautogui.hotkey("ctrl", "a")
         pyautogui.typewrite(str(number), interval=0.05)
@@ -88,8 +87,5 @@ def main():
 
 if __name__ == "__main__":
     print("Starting SMS automation...")
-    print("Make sure you have the following screenshots in the 'screenshots' folder:")
-    print("- new_message.png")
-    print("- message_box.png")
     time.sleep(3)
     main()

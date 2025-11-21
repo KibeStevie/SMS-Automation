@@ -13,6 +13,7 @@ def log(status, number, details=""):
 
 def send_sms(number):
     try:
+        # Coordinate for new message icon in messaging app
         pyautogui.click(395, 156)
         time.sleep(1)
         pyautogui.hotkey("ctrl", "a")
@@ -20,6 +21,7 @@ def send_sms(number):
         time.sleep(1)
         pyautogui.press("enter")
         time.sleep(2)
+        # Coordinate for send a message input box
         pyautogui.click(753, 1011)
         time.sleep(1)
         pyautogui.typewrite(MESSAGE, interval=0.03)
